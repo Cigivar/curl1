@@ -5,4 +5,4 @@
 
 $html = curl_get('http://ntschool.ru/kursyi');
 
-echo $html;
+file_put_contents('1.html',$html);
