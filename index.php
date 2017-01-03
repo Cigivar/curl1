@@ -16,7 +16,11 @@ foreach ($courses as $course){
     
     $one = curl_get('http://www.avalon.ru/Courses/Design/Courses/?gclid=CKa5h6OMp9ECFciCsgodJHACoQ'.$a -> href);
     
-    file_put_contents('1.html',$one);
+    $one_dom = str_get_html($one);
+    
+    $cost = $one_dom -> find('.money',0);
+    echo $a -> plaintext .''.$cost -> plaintext;
+    
     break;
     
     
