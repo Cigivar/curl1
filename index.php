@@ -11,5 +11,6 @@ $courses = $dom -> find('.courses-list--item-body');
 
 
 foreach($courses as $course){
-    echo $course -> plaintext."<br />";
+    $a = $course -> find('a',0);
+    echo $a -> href."<br />";
 }
